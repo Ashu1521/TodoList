@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './Todo.css';
-import Toggle from './Toggle';
+
 function Task({ task, index, completeTask, removeTask }) {
     return (
         <div
