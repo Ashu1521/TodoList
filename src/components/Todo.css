@@ -2,33 +2,33 @@
 /* src/components/Todo.css */
 
 body{
-background: rgb(255, 173, 65);
+background:rgba(230, 226, 25, 0.884);
 }
 
 .todo-container{
-background: rgb(41, 33, 33);
+background: rgb(181, 117, 218);
 width: 40vw;
 margin: 10em auto;
 border-radius: 15px;
 padding: 20px 10px;
-color: white;
+color: #070606;
 border: 3px solid rgb(36, 110, 194);
 }
     
 .task{
-border: 1px solid white;
+border: 1px solid hsl(133, 82%, 2%);
 border-radius: 5px;
 padding: 0.5em;
 margin: 0.5em;
 }
 
 .task button{
-background: rgb(12, 124, 251);
+background:green;
 border-radius: 5px;
 margin: 0px 5px;
 padding: 3px 5px;
-border: none;
-cursor: pointer;
+border: black;
+cursor:pointer;
 color: white;
 float: right;
 }
@@ -37,12 +37,16 @@ float: right;
 margin: 0.5em;
 font-size: 2em;
 text-align: center;
+font-family: 'Times New Roman', Times, serif;
 }
 
 .create-task input[type=text]{
 margin: 2.5em 2em;
 width: 80%;
-outline: none;
-border: none;
+outline: black;
+border-radius: 10px;
+border: black;
 padding: 0.7em;
+float: none;
+background-color: aquamarine;
 }

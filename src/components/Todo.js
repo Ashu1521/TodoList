@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './Todo.css';
-
-
+import Toggle from './Toggle';
 function Task({ task, index, completeTask, removeTask }) {
     return (
         <div
@@ -10,7 +9,7 @@ function Task({ task, index, completeTask, removeTask }) {
         >
             {task.title}
 
-            <button style={{ background: "red" }} onClick={() => removeTask(index)}>x</button>
+            <button style={{ background: "red" }} onClick={() => removeTask(index)}>Delete</button>
             <button onClick={() => completeTask(index)}>Complete</button>
 
         </div>
@@ -28,6 +27,7 @@ function CreateTask({ addTask }) {
     }
     return (
         <form onSubmit={handleSubmit}>
+            <div className='input'>
             <input
                 type="text"
                 className="input"
@@ -35,6 +35,7 @@ function CreateTask({ addTask }) {
                 placeholder="Add a new task"
                 onChange={e => setValue(e.target.value)}
             />
+            </div>
         </form>
     );
 }
@@ -44,15 +45,15 @@ function Todo() {
     const [tasks, setTasks] = useState([
         {
             title: "Grab some Pizza",
-            completed: true
+            completed: null
         },
         {
             title: "Do your workout",
-            completed: true
+            completed: null
         },
         {
             title: "Hangout with friends",
-            completed: false
+            completed: null
         }
     ]);
 
@@ -76,10 +77,12 @@ function Todo() {
         setTasks(newTasks);
     };
 
-    return (
+
+
+    return (    
         <div className="todo-container">
-            <div className="header">Pending tasks ({tasksRemaining})</div>
-            <div className="tasks">
+            <div className="header">PENDING TASKS ({tasksRemaining})</div>
+                <div className="tasks">
                 {tasks.map((task, index) => (
                     <Task
                     task={task}
