@@ -2,11 +2,11 @@
 /* src/components/Todo.css */
 
 body{
-background:rgba(230, 226, 25, 0.884);
+background:rgba(85, 235, 105, 0.884);
 }
 
 .todo-container{
-background: rgb(181, 117, 218);
+background: rgb(202, 91, 0);
 width: 40vw;
 margin: 10em auto;
 border-radius: 15px;
